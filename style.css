@@ -98,7 +98,9 @@ img {
 }
 
 .carousel-item {
-  padding: 0 0.5em;
+  margin: 1em;
+  padding: 2em;
+  background-color: #fff;
   display: inline-block;
 }
 

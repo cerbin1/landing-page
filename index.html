@@ -77,13 +77,60 @@
     </section>
 
     <section id="image-content" class="image-content">
-      <img src="assets/images/image1.jpg" />
-      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-      <p>
+      <img src="assets/images/output.jpg" />
+      <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+      <h4>
         Nam iaculis orci at quam ultricies, et dignissim eros tristique.
         Pellentesque id lobortis dui. Mauris ac ligula sit amet diam hendrerit
         cursus. Maecenas auctor suscipit dui, nec efficitur velit maximus.
+      </h4>
+      <p class="description">
+        Proin euismod, nulla sed congue blandit, odio lectus auctor nisi, sed
+        sagittis neque tellus sit amet tellus. Integer et orci vitae nisl
+        pharetra pellentesque vel id mauris. Integer risus nunc, auctor quis
+        lacus eleifend, dapibus viverra urna. Donec luctus nulla quam, ac
+        facilisis mi hendrerit id. In rhoncus nisi ac mauris aliquet, nec
+        vulputate augue scelerisque. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Suspendisse euismod
+        fringilla arcu, in posuere ex feugiat non. In mollis mattis lectus eget
+        tristique. In non congue lectus. Sed nunc tortor, porta ut commodo et,
+        consectetur ac lacus.
       </p>
+
+      <p
+        id="continue-reading-content"
+        class="description"
+        style="display: none"
+      >
+        Morbi accumsan tellus posuere dui faucibus sollicitudin. Donec vel dolor
+        metus. Etiam ornare eu tellus id commodo. Phasellus eget libero aliquet,
+        posuere libero at, fermentum sapien. Nam suscipit nibh a mi posuere, sed
+        vestibulum sem gravida. Maecenas porta metus at dolor consequat viverra.
+        Nunc euismod mi nec posuere venenatis. Donec nibh augue, scelerisque at
+        suscipit in, tempor et ante. Aenean odio quam, fringilla at tellus a,
+        sagittis lacinia sem. Nam nisl diam, hendrerit vel dui viverra,
+        vulputate luctus enim. Nulla vel ante quis metus pretium interdum vitae
+        eu eros. Ut quis ultricies sem. Vestibulum interdum diam a dolor congue
+        bibendum. Morbi mauris nulla, fringilla ac luctus vitae, hendrerit vitae
+        magna. Phasellus nulla dui, efficitur non erat eu, consectetur eleifend
+        odio. Praesent mauris mi, accumsan ut tincidunt nec, rutrum in mi.
+        Nullam molestie tempus vestibulum. Aenean orci enim, sollicitudin eget
+        ornare nec, accumsan et est. Curabitur sagittis eleifend pellentesque.
+        Etiam a faucibus quam. Mauris id erat velit. Donec at nisl ut ex rutrum
+        accumsan. Donec iaculis a quam in elementum. Etiam tempus felis a
+        iaculis egestas. Mauris porta ac lectus ac mattis. Aliquam erat
+        volutpat. Pellentesque vitae molestie nibh. Fusce dignissim, ipsum eu
+        ullamcorper condimentum, risus odio viverra augue, id egestas justo erat
+        ac massa. Donec porttitor massa mi. Praesent ut sem est. Donec aliquam
+        mi elit, ut molestie ligula accumsan sit amet. Fusce pharetra mi at enim
+        efficitur pharetra. Sed quis commodo nisl. Aliquam erat volutpat.
+        Praesent blandit eu lectus et auctor. Pellentesque urna mauris,
+        scelerisque in lacinia vitae, sollicitudin vel diam. Sed vitae diam in
+        magna bibendum dictum vitae nec tortor. Curabitur molestie, justo in
+        fringilla egestas, enim metus ullamcorper orci, nec laoreet nisl neque
+        mollis lorem.
+      </p>
+      <a class="button" id="continue-reading-button">Continue Reading</a>
     </section>
 
     <script>
@@ -110,6 +157,15 @@
 
       backward.addEventListener("mouseleave", function () {
         clearInterval(idx);
+      });
+
+      const continueReadingButton = document.getElementById(
+        "continue-reading-button"
+      );
+      continueReadingButton.addEventListener("click", function () {
+        document.getElementById("continue-reading-content").style.display =
+          "block";
+        continueReadingButton.style.display = "none";
       });
     </script>
   </body>

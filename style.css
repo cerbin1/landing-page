@@ -54,13 +54,13 @@ hr {
   display: inline-block;
 }
 
-h1 {
+logo {
   font-size: 64px;
 }
 
 .button {
   display: inline-block;
-  color: inherit;
+  color: #fff;
   background: #df7366;
   border-radius: 0.5em;
   padding: 0.65em 3em 0.65em 3em;
@@ -202,5 +202,12 @@ img {
 .image-content {
   margin: 0 auto;
   max-width: 100%;
-  width: 700px;
+  width: 1200px;
+}
+
+.image-content .description {
+  text-align: justify;
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.5em;
 }

@@ -108,11 +108,20 @@ img {
   cursor: pointer;
 }
 
+.carousel-item-link:hover {
+  color: #df7366;
+  -moz-transition: color 0.35s ease-in-out;
+  -webkit-transition: color 0.35s ease-in-out;
+  -o-transition: color 0.35s ease-in-out;
+  -ms-transition: color 0.35s ease-in-out;
+  transition: color 0.35s ease-in-out;
+}
 .carousel-item-text {
   cursor: text;
 }
 
-.carousel .forward, .carousel .backward {
+.carousel .forward,
+.carousel .backward {
   position: absolute;
   top: 50%;
   width: 6em;
@@ -121,62 +130,65 @@ img {
   cursor: pointer;
 }
 
-  .carousel .forward:before, .carousel .backward:before {
-    content: '';
-    display: block;
-    width: 6em;
-    height: 6em;
-    border-radius: 100%;
-    background-color: rgba(72, 57, 73, 0.5);
-    position: fixed;
-    top: 50%;
-    margin-top: -3em;
-    -moz-transition: background-color 0.35s ease-in-out;
-    -webkit-transition: background-color 0.35s ease-in-out;
-    -o-transition: background-color 0.35s ease-in-out;
-    -ms-transition: background-color 0.35s ease-in-out;
-    transition: background-color 0.35s ease-in-out;
-    -webkit-backface-visibility: hidden;
-  }
+.carousel .forward:before,
+.carousel .backward:before {
+  content: "";
+  display: block;
+  width: 6em;
+  height: 6em;
+  border-radius: 100%;
+  background-color: rgba(72, 57, 73, 0.5);
+  position: fixed;
+  top: 50%;
+  margin-top: -3em;
+  -moz-transition: background-color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out;
+  -o-transition: background-color 0.35s ease-in-out;
+  -ms-transition: background-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out;
+  -webkit-backface-visibility: hidden;
+}
 
-  .carousel .forward:after, .carousel .backward:after {
-    content: '';
-    width: 3em;
-    height: 3em;
-    position: fixed;
-    top: 50%;
-    margin: -1.5em 0 0 0;
-    background: url("assets/images/arrow.svg") no-repeat center center;
-  }
+.carousel .forward:after,
+.carousel .backward:after {
+  content: "";
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  top: 50%;
+  margin: -1.5em 0 0 0;
+  background: url("assets/images/arrow.svg") no-repeat center center;
+}
 
-  .carousel .forward:hover:before, .carousel .backward:hover:before {
-    background-color: rgba(239, 131, 118, 0.75);
-  }
+.carousel .forward:hover:before,
+.carousel .backward:hover:before {
+  background-color: rgba(239, 131, 118, 0.75);
+}
 
 .carousel .forward {
   right: 0;
 }
 
-  .carousel .forward:before {
-    right: -3em;
-  }
+.carousel .forward:before {
+  right: -3em;
+}
 
-  .carousel .forward:after {
-    right: -0.25em;
-  }
+.carousel .forward:after {
+  right: -0.25em;
+}
 
 .carousel .backward {
   left: 0;
 }
 
-  .carousel .backward:before {
-    left: -3em;
-  }
+.carousel .backward:before {
+  left: -3em;
+}
 
-  .carousel .backward:after {
-    left: -0.25em;
-    -moz-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
+.carousel .backward:after {
+  left: -0.25em;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

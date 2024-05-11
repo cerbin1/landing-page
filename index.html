@@ -29,7 +29,71 @@
     </div>
 
     <div id="landing">
-      <p>test</p>
+      <h1>Lorem Ipsum</h1>
+      <h3>
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit
+      </h3>
     </div>
+
+    <section class="carousel" id="carousel">
+      <div class="carousel-item">
+        <img src="assets/images/image1.jpg" />
+        <p class="carousel-item-link">Lorem ipsum dolor</p>
+        <p class="carousel-item-text">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/image1.jpg" />
+
+        <p class="carousel-item-link">Numquam eius modi</p>
+        <p class="carousel-item-text">At vero eos et accusamus et iusto.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/image1.jpg" />
+        <p class="carousel-item-link">Doloremque laudantium</p>
+        <p class="carousel-item-text">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/image1.jpg" />
+        <p class="carousel-item-link">Temporibus autem quibusdam</p>
+        <p class="carousel-item-text">At vero eos et accusamus et iusto.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/image1.jpg" />
+        <p class="carousel-item-link">Itaque earum</p>
+        <p class="carousel-item-text">
+          Omnis voluptas assumenda est, omnis dolor repellendus.
+        </p>
+      </div>
+      <span class="forward" id="forward"></span>
+      <span class="backward" id="backward"></span>
+    </section>
+
+    <script>
+      const carousel = document.getElementById("carousel");
+      const forward = document.getElementById("forward");
+      const backward = document.getElementById("backward");
+
+      let idx;
+      forward.addEventListener("mouseenter", function () {
+        idx = setInterval(() => {
+          carousel.scrollLeft += 3;
+        }, 10);
+      });
+
+      forward.addEventListener("mouseleave", function () {
+        clearInterval(idx);
+      });
+
+      backward.addEventListener("mouseenter", function () {
+        idx = setInterval(() => {
+          carousel.scrollLeft -= 3;
+        }, 10);
+      });
+
+      backward.addEventListener("mouseleave", function () {
+        clearInterval(idx);
+      });
+    </script>
   </body>
 </html>

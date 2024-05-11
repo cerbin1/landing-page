@@ -1,16 +1,15 @@
 body {
-  height: 100%;
   margin: 0;
   color: #483949;
   text-align: center;
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
+  scroll-behavior: smooth;
 }
 
 .nav {
   display: flex;
-  justify-content: center;
   padding: 13.6px;
 }
 
@@ -24,17 +23,6 @@ body {
 
 .nav-line {
   flex: 1;
-  cursor: auto;
-}
-
-hr {
-  position: relative;
-  display: block;
-  border: 0;
-  margin-bottom: 9em;
-  height: 6px;
-  border-top: solid 1px rgba(128, 128, 128, 0.2);
-  border-bottom: solid 1px rgba(128, 128, 128, 0.2);
 }
 
 .header {
@@ -47,34 +35,15 @@ hr {
   background-size: cover;
 }
 
+hr {
+  border: 0;
+  height: 6px;
+}
+
 #header hr {
   margin-bottom: 3em;
   border-bottom-color: rgba(192, 192, 192, 0.35);
   box-shadow: inset 0 1px 0 0 rgba(192, 192, 192, 0.35);
-}
-
-#header hr:before,
-#header hr:after {
-  background: rgba(192, 192, 192, 0.35);
-}
-
-hr:before,
-hr:after {
-  content: "";
-  position: absolute;
-  top: -8px;
-  display: block;
-  width: 1px;
-  height: 21px;
-  background: rgba(128, 128, 128, 0.2);
-}
-
-hr:before {
-  left: -1px;
-}
-
-hr:after {
-  right: -1px;
 }
 
 #header .inner {
@@ -82,29 +51,21 @@ hr:after {
   padding-left: 1em;
   padding-right: 1em;
   position: relative;
-  z-index: 1;
-  margin: 0;
   display: inline-block;
-  vertical-align: middle;
 }
 
-.logo {
+h1 {
   font-size: 64px;
 }
 
 .button {
-  position: relative;
   display: inline-block;
+  color: inherit;
   background: #df7366;
-  color: #fff;
-  text-align: center;
   border-radius: 0.5em;
-  text-decoration: none;
   padding: 0.65em 3em 0.65em 3em;
-  border: 0;
+  text-decoration: none;
   cursor: pointer;
-  outline: 0;
-  font-weight: 300;
   -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out,
     border-bottom-color 0.35s ease-in-out;
   -webkit-transition: background-color 0.35s ease-in-out,
@@ -118,3 +79,104 @@ hr:after {
 .button:hover {
   background-color: #ef8376;
 }
+
+img {
+  width: 100%;
+  cursor: pointer;
+}
+
+#landing {
+  padding: 3em 0;
+}
+
+.carousel {
+  background-color: #f0f4f4;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2em 2em 2em 2em;
+  position: relative;
+}
+
+.carousel-item {
+  padding: 0 0.5em;
+  display: inline-block;
+}
+
+.carousel-item-link {
+  text-decoration: none;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.carousel-item-text {
+  cursor: text;
+}
+
+.carousel .forward, .carousel .backward {
+  position: absolute;
+  top: 50%;
+  width: 6em;
+  height: 12em;
+  margin-top: -6em;
+  cursor: pointer;
+}
+
+  .carousel .forward:before, .carousel .backward:before {
+    content: '';
+    display: block;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    background-color: rgba(72, 57, 73, 0.5);
+    position: fixed;
+    top: 50%;
+    margin-top: -3em;
+    -moz-transition: background-color 0.35s ease-in-out;
+    -webkit-transition: background-color 0.35s ease-in-out;
+    -o-transition: background-color 0.35s ease-in-out;
+    -ms-transition: background-color 0.35s ease-in-out;
+    transition: background-color 0.35s ease-in-out;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .carousel .forward:after, .carousel .backward:after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    position: fixed;
+    top: 50%;
+    margin: -1.5em 0 0 0;
+    background: url("assets/images/arrow.svg") no-repeat center center;
+  }
+
+  .carousel .forward:hover:before, .carousel .backward:hover:before {
+    background-color: rgba(239, 131, 118, 0.75);
+  }
+
+.carousel .forward {
+  right: 0;
+}
+
+  .carousel .forward:before {
+    right: -3em;
+  }
+
+  .carousel .forward:after {
+    right: -0.25em;
+  }
+
+.carousel .backward {
+  left: 0;
+}
+
+  .carousel .backward:before {
+    left: -3em;
+  }
+
+  .carousel .backward:after {
+    left: -0.25em;
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }

@@ -1,11 +1,32 @@
 body {
   margin: 0;
-  color: #483949;
+  color: #5b5b5b;
   text-align: center;
   cursor: default;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   scroll-behavior: smooth;
+  background: #f0f4f4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  color: #483949;
+  line-height: 1.25em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: #5b5b5b;
 }
 
 .nav {
@@ -54,8 +75,9 @@ hr {
   display: inline-block;
 }
 
-logo {
-  font-size: 64px;
+.logo {
+  font-size: 5em;
+  color: #f0f4f4;
 }
 
 .button {
@@ -80,7 +102,7 @@ logo {
   background-color: #ef8376;
 }
 
-img {
+.carousel img {
   width: 100%;
   cursor: pointer;
 }
@@ -90,7 +112,6 @@ img {
 }
 
 .carousel {
-  background-color: #f0f4f4;
   overflow: hidden;
   white-space: nowrap;
   padding: 2em 2em 2em 2em;
@@ -104,7 +125,7 @@ img {
   display: inline-block;
 }
 
-.carousel-item-link {
+.image-link {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -114,7 +135,7 @@ img {
   color: #483949;
 }
 
-.carousel-item-link:hover {
+.image-link:hover {
   color: #df7366;
   -moz-transition: color 0.35s ease-in-out;
   -webkit-transition: color 0.35s ease-in-out;
@@ -153,6 +174,7 @@ img {
   -ms-transition: background-color 0.35s ease-in-out;
   transition: background-color 0.35s ease-in-out;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .carousel .forward:after,
@@ -199,16 +221,53 @@ img {
   transform: scaleX(-1);
 }
 
+.wrapper {
+  background: #fff;
+  padding: 5em 0;
+  margin: 0 0 2.5em 0;
+}
+
 .image-content {
   margin: 0 auto;
-  max-width: 100%;
   width: 1200px;
-  padding-bottom: 6em;
+  max-width: 100%;
 }
 
 .image-content .description {
   text-align: justify;
   font-size: 1.2em;
-  font-style: italic;
   line-height: 1.5em;
+  width: 1200px;
+  max-width: 100%;
+}
+
+.features {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.features-content {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+  display: flex;
+}
+
+.features-content-item {
+  flex: 1;
+  padding: 2em 0 0 2em;
+}
+
+.features-item-text {
+  cursor: text;
+  text-align: justify;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.features-content-item img {
+  max-width: 100%;
+  cursor: pointer;
+  margin-bottom: 2em;
 }

@@ -277,7 +277,7 @@ hr {
 
 .footer {
   background: #2b252c;
-  padding: 6em 0;
+  padding: 6em 0 1em 0;
 }
 
 .footer-content {
@@ -347,7 +347,6 @@ hr {
   line-height: 1.5em;
 }
 
-
 .article:hover {
   color: #df7366;
   -moz-transition: color 0.35s ease-in-out;
@@ -380,4 +379,37 @@ hr {
   margin: 0 auto;
   max-width: 100%;
   width: 1200px;
+}
+
+.footer-footer-content p {
+  color: #fff;
+  cursor: text;
+  font-size: 1em;
+
+}
+
+.footer-footer-content h3 {
+  padding: 2em 0 0 2em;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.icons {
+  background: rgba(128, 128, 128, 0.05);
+  border-radius: 4em;
+  display: inline-block;
+  margin: 2em 0;
+  padding: 0.35em 0.75em 0.35em 0.75em;
+}
+
+.fa {
+  padding: 0.7em;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.fa:hover {
+  color: #ef8376;
 }

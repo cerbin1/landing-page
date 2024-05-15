@@ -313,7 +313,10 @@ hr {
 
 .image-content {
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
+}
+
+.image-content img {
   max-width: 100%;
 }
 
@@ -321,8 +324,6 @@ hr {
   text-align: justify;
   font-size: 1.2em;
   line-height: 1.5em;
-  width: 1200px;
-  max-width: 100%;
 }
 
 .features {

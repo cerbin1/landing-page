@@ -107,7 +107,6 @@ hr {
 .carousel img {
   width: 100%;
   cursor: pointer;
-
 }
 
 #landing {
@@ -121,7 +120,6 @@ hr {
   position: relative;
 }
 
-
 .carousel-item {
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
@@ -134,10 +132,10 @@ hr {
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -182,7 +180,7 @@ hr {
   height: 6em;
   border-radius: 100%;
   background-color: rgba(72, 57, 73, 0.5);
-  position: fixed;
+  position: absolute;
   top: 50%;
   margin-top: -3em;
   -moz-transition: background-color 0.35s ease-in-out;
@@ -199,7 +197,7 @@ hr {
   content: "";
   width: 3em;
   height: 3em;
-  position: fixed;
+  position: absolute;
   top: 50%;
   margin: -1.5em 0 0 0;
   background: url("assets/images/arrow.svg") no-repeat center center;
@@ -399,7 +397,6 @@ hr {
   color: #fff;
   cursor: text;
   font-size: 1em;
-
 }
 
 .footer-footer-content h3 {

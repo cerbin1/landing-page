@@ -2,7 +2,10 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Coding website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
@@ -67,6 +70,7 @@
           Omnis voluptas assumenda est, omnis dolor repellendus.
         </p>
       </div>
+
       <span class="forward" id="forward"></span>
       <span class="backward" id="backward"></span>
     </section>
@@ -263,46 +267,80 @@
         <hr />
         <div class="footer-footer-content">
           <h3>Cras bibendum dolor sed enim consequat?</h3>
-          <p>Donec vitae mi urna. Cras bibendum dolor sed enim consequat, in pharetra nisl pretium. Vestibulum dapibus nunc vel hendrerit mattis.</p>
+          <p>
+            Donec vitae mi urna. Cras bibendum dolor sed enim consequat, in
+            pharetra nisl pretium. Vestibulum dapibus nunc vel hendrerit mattis.
+          </p>
         </div>
       </div>
       <div class="icons">
-        <a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
-      <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
-      <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
-      <a href="https://www.pinterest.com/" target="_blank" class="fa fa-pinterest"></a>
-      <a href="https://dribbble.com/" target="_blank" class="fa fa-dribbble"></a>
-      <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
-    </div>
-    <div class="footer-ending">
-     © Footer
-    </div>
+        <a
+          href="https://www.twitter.com/"
+          target="_blank"
+          class="fa fa-twitter"
+        ></a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          class="fa fa-facebook"
+        ></a>
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          class="fa fa-instagram"
+        ></a>
+        <a
+          href="https://www.pinterest.com/"
+          target="_blank"
+          class="fa fa-pinterest"
+        ></a>
+        <a
+          href="https://dribbble.com/"
+          target="_blank"
+          class="fa fa-dribbble"
+        ></a>
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          class="fa fa-linkedin"
+        ></a>
+      </div>
+      <div class="footer-ending">© Footer</div>
     </section>
 
     <script>
       const carousel = document.getElementById("carousel");
       const forward = document.getElementById("forward");
       const backward = document.getElementById("backward");
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
 
-      let idx;
+      let moveCarousel;
       forward.addEventListener("mouseenter", function () {
-        idx = setInterval(() => {
-          carousel.scrollLeft += 3;
+        moveCarousel = setInterval(() => {
+          if (carousel.scrollLeft < maxScroll) {
+            carousel.scrollLeft += 4;
+            forward.style.right = -1 * carousel.scrollLeft + "px";
+            backward.style.left = carousel.scrollLeft + "px";
+          }
         }, 10);
       });
 
       forward.addEventListener("mouseleave", function () {
-        clearInterval(idx);
+        clearInterval(moveCarousel);
       });
 
       backward.addEventListener("mouseenter", function () {
-        idx = setInterval(() => {
-          carousel.scrollLeft -= 3;
+        moveCarousel = setInterval(() => {
+          if (carousel.scrollLeft > 0) {
+            carousel.scrollLeft -= 4;
+            forward.style.right = -1 * carousel.scrollLeft + "px";
+            backward.style.left = carousel.scrollLeft + "px";
+          }
         }, 10);
       });
 
       backward.addEventListener("mouseleave", function () {
-        clearInterval(idx);
+        clearInterval(moveCarousel);
       });
 
       const continueReadingButton = document.getElementById(

@@ -359,7 +359,7 @@ hr {
   line-height: 1.5em;
 }
 
-.article:hover {
+.article a:hover {
   color: #df7366;
   -moz-transition: color 0.35s ease-in-out;
   -webkit-transition: color 0.35s ease-in-out;

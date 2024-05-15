@@ -191,8 +191,12 @@ hr {
 }
 
 @media (max-width: 800px) {
-  .carousel-item {
+  .homepage .carousel {
+    padding: 0;
+  }
+  .carousel .carousel-item {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -347,6 +351,10 @@ p {
 @media (max-width: 800px) {
   .features-content {
     flex-direction: column;
+  }
+  .features-content .features-content-item {
+    padding: 0;
+    margin-bottom: 1em;
   }
 }
 

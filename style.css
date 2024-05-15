@@ -62,6 +62,13 @@ h4 {
   border-radius: 30px;
 }
 
+@media screen and (max-width: 800px) {
+  body .header .nav .dropdown .dropdown-content {
+    top: 6em;
+    left: 1.5em;
+  }
+}
+
 .dropdown-content {
   display: none;
   position: absolute;

@@ -328,14 +328,17 @@ hr {
 
 .features {
   margin: 0 auto;
-  max-width: 100%;
-  width: 1200px;
+  max-width: 1200px;
+}
+
+@media (max-width: 800px) {
+  .features-content {
+    flex-direction: column;
+  }
 }
 
 .features-content {
   margin: 0 auto;
-  max-width: 100%;
-  width: 1200px;
   display: flex;
 }
 
@@ -365,8 +368,13 @@ hr {
 .footer-content {
   display: flex;
   margin: 0 auto;
-  max-width: 100%;
-  width: 1200px;
+  max-width: 1200px;
+}
+
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+  }
 }
 
 .footer-content-item {
@@ -459,8 +467,7 @@ hr {
 .footer-footer {
   padding-top: 4em;
   margin: 0 auto;
-  max-width: 100%;
-  width: 1200px;
+  max-width: 1200px;
 }
 
 .footer-footer-content p {

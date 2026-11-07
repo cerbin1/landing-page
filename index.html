@@ -1,7 +1,11 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Landing page</title>
+    <meta name="theme-color" content="#19232d" />
+    <meta name="description" content="Elsewhere Journal is a sample travel journal for curious people who find their best ideas outdoors." />
+    <title>Elsewhere Journal — Find your way outside</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23aa4135'/%3E%3Cpath d='M18 75 49 24l14 23 8-13 20 41H18z' fill='%23fff'/%3E%3C/svg%3E" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -11,265 +15,218 @@
   </head>
 
   <body class="homepage">
-    <div id="header" class="header">
-      <div class="nav" id="navbar">
+    <header id="header" class="header">
+      <nav class="nav" id="navbar" aria-label="Main navigation">
         <div class="nav-line">
           <hr />
         </div>
-        <div class="nav-item"><span>Home</span></div>
+        <a class="nav-item" href="#header">Home</a>
         <div class="nav-item dropdown">
-          <span>Dropdown</span>
-          <div class="dropdown-content">
+          <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="nav-dropdown">Explore <span aria-hidden="true">⌄</span></button>
+          <div class="dropdown-content" id="nav-dropdown">
             <ul>
-              <li>Donec vitae consectetur</li>
-              <li>Sed quis ultricies erat sit</li>
-              <li>Vivamus elementum dolor</li>
-              <li>Amet lacus</li>
-              <li>Fringilla lobortis</li>
+              <li><a href="#carousel">Field notes</a></li>
+              <li><a href="#image-content">The journal</a></li>
+              <li><a href="#features">Travel well</a></li>
             </ul>
           </div>
         </div>
-
-        <div class="nav-item"><span>Left Sidebar</span></div>
-        <div class="nav-item"><span>Right Sidebar</span></div>
-        <div class="nav-item"><span>No Sidebar</span></div>
+        <a class="nav-item" href="#carousel">Field notes</a>
+        <a class="nav-item" href="#image-content">The journal</a>
+        <a class="nav-item" href="#features">Travel well</a>
         <div class="nav-line">
           <hr />
         </div>
-      </div>
+      </nav>
       <div class="inner">
-        <h1 class="logo">Logo</h1>
+        <p class="eyebrow">An independent travel journal</p>
+        <h1 class="logo">Find your way<br />outside.</h1>
         <hr />
-        <p>Landing Page</p>
-        <a href="#landing" class="button">Visit Landing Page</a>
+        <p class="hero-copy">Slow journeys, open trails, and the places that stay with you.</p>
+        <a href="#landing" class="button">Read the latest issue <span aria-hidden="true">↘</span></a>
       </div>
-    </div>
+      <a class="scroll-cue" href="#landing" aria-label="Scroll to discover">↓</a>
+    </header>
 
     <div id="landing">
-      <h1>Lorem Ipsum</h1>
-      <h4>
-        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit.
-      </h4>
+      <p class="eyebrow">Stories for the long way round</p>
+      <h2>Go where the day takes you.</h2>
+      <p class="section-intro">
+        Trail notes, thoughtful guides, and small reminders to look up from the map.
+      </p>
     </div>
 
-    <section class="carousel" id="carousel">
+    <section class="carousel-shell" aria-label="Featured stories">
+      <div class="carousel" id="carousel" role="group" aria-label="Scrollable featured stories" tabindex="0">
       <div class="carousel-item">
-        <a href="#image-content"><img src="assets/images/image1.jpg" /></a>
-        <a class="image-link" href="#image-content"> Lorem ipsum dolor </a>
-        <p class="carousel-item-text">Lorem ipsum dolor sit amet.</p>
+        <a href="#image-content"><img src="assets/images/photo1.jpg" alt="Illustrated rugged peaks above a forested valley" loading="lazy" /></a>
+        <a class="image-link" href="#image-content">When the peaks turn quiet</a>
+        <p class="carousel-item-text">A slower route through high country.</p>
       </div>
       <div class="carousel-item">
-        <a href="#image-content"><img src="assets/images/image1.jpg" /></a>
-        <a class="image-link" href="#image-content"> Numquam eius modi </a>
-        <p class="carousel-item-text">At vero eos et accusamus et iusto.</p>
+        <a href="#image-content"><img src="assets/images/image2.jpg" alt="Snow-covered mountain peaks beneath a blue sky" loading="lazy" /></a>
+        <a class="image-link" href="#image-content">Winter, without the rush</a>
+        <p class="carousel-item-text">Finding stillness in the snow line.</p>
       </div>
       <div class="carousel-item">
-        <a href="#image-content"><img src="assets/images/image1.jpg" /></a>
-        <a class="image-link" href="#image-content"> Doloremque laudantium </a>
-        <p class="carousel-item-text">Lorem ipsum dolor sit amet.</p>
+        <a href="#image-content"><img src="assets/images/photo2.jpg" alt="A snowy mountain valley crossed by dark tree lines" loading="lazy" /></a>
+        <a class="image-link" href="#image-content">A trail worth taking</a>
+        <p class="carousel-item-text">Small steps, wide open views.</p>
       </div>
       <div class="carousel-item">
-        <a href="#image-content"><img src="assets/images/image1.jpg" /></a>
+        <a href="#image-content"><img src="assets/images/image-content.jpg" alt="Layered blue peaks above a golden mountain slope" loading="lazy" /></a>
         <a class="image-link" href="#image-content">
-          Temporibus autem quibusdam
+          Notes from the ridgeline
         </a>
-        <p class="carousel-item-text">At vero eos et accusamus et iusto.</p>
+        <p class="carousel-item-text">What to pack, where to pause, when to wander.</p>
       </div>
       <div class="carousel-item">
-        <a href="#image-content"><img src="assets/images/image1.jpg" /></a>
-        <a class="image-link" href="#image-content">Itaque earum</a>
-        <p class="carousel-item-text">
-          Omnis voluptas assumenda est, omnis dolor.
-        </p>
+        <a href="#image-content"><img src="assets/images/photo3.jpg" alt="Green mountain slopes beneath hazy peaks" loading="lazy" /></a>
+        <a class="image-link" href="#image-content">The view on the way back</a>
+        <p class="carousel-item-text">The best part of a journey is often the return.</p>
       </div>
 
-      <span class="forward" id="forward"></span>
-      <span class="backward" id="backward"></span>
+      </div>
+      <button class="carousel-control backward" id="backward" type="button" aria-label="Scroll to previous stories">←</button>
+      <button class="carousel-control forward" id="forward" type="button" aria-label="Scroll to next stories">→</button>
     </section>
 
     <div class="wrapper">
       <section id="image-content" class="image-content">
-        <img src="assets/images/image-content.jpg" />
-        <h1>Lorem ipsum dolor sit amet, consectetur elit.</h1>
-        <h4>
-          Nam iaculis orci at quam ultricies, et dignissim eros tristique.
-          Pellentesque id lobortis dui. Mauris ac ligula sit amet diam hendrerit
-          cursus. Maecenas auctor suscipit dui, nec efficitur velit maximus.
-        </h4>
+        <img src="assets/images/image-content.jpg" alt="Panoramic view of layered blue peaks above a golden mountain slope" loading="lazy" />
+        <p class="eyebrow">From the journal</p>
+        <h2>Take the scenic route.</h2>
+        <p class="section-intro">
+          A good trip is more than a list of stops. It is the early light on a trail, a warm meal after a long walk, and enough time to take the path that caught your eye.
+        </p>
         <p class="description">
-          Proin euismod, nulla sed congue blandit, odio lectus auctor nisi, sed
-          sagittis neque tellus sit amet tellus. Integer et orci vitae nisl
-          pharetra pellentesque vel id mauris. Integer risus nunc, auctor quis
-          lacus eleifend, dapibus viverra urna. Donec luctus nulla quam, ac
-          facilisis mi hendrerit id. In rhoncus nisi ac mauris aliquet, nec
-          vulputate augue scelerisque. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos. Suspendisse
-          euismod fringilla arcu, in posuere ex feugiat non. In mollis mattis
-          lectus eget tristique. In non congue lectus. Sed nunc tortor, porta ut
-          commodo et, consectetur ac lacus.
+          Elsewhere is a sample journal for curious travelers. We collect practical notes and personal stories that make it easier to plan a day outdoors, leave a little room for detours, and notice the details that make a place feel like its own.
         </p>
 
         <p
           id="continue-reading-content"
           class="description"
-          style="display: none"
+          hidden
         >
-          Morbi accumsan tellus posuere dui faucibus sollicitudin. Donec vel
-          dolor metus. Etiam ornare eu tellus id commodo. Phasellus eget libero
-          aliquet, posuere libero at, fermentum sapien. Nam suscipit nibh a mi
-          posuere, sed vestibulum sem gravida. Maecenas porta metus at dolor
-          consequat viverra. Nunc euismod mi nec posuere venenatis. Donec nibh
-          augue, scelerisque at suscipit in, tempor et ante. Aenean odio quam,
-          fringilla at tellus a, sagittis lacinia sem. Nam nisl diam, hendrerit
-          vel dui viverra, vulputate luctus enim. Nulla vel ante quis metus
-          pretium interdum vitae eu eros. Ut quis ultricies sem. Vestibulum
-          interdum diam a dolor congue bibendum. Morbi mauris nulla, fringilla
-          ac luctus vitae, hendrerit vitae magna. Phasellus nulla dui, efficitur
-          non erat eu, consectetur eleifend odio. Praesent mauris mi, accumsan
-          ut tincidunt nec, rutrum in mi. Nullam molestie tempus vestibulum.
-          Aenean orci enim, sollicitudin eget ornare nec, accumsan et est.
-          Curabitur sagittis eleifend pellentesque. Etiam a faucibus quam.
-          Mauris id erat velit. Donec at nisl ut ex rutrum accumsan. Donec
-          iaculis a quam in elementum. Etiam tempus felis a iaculis egestas.
-          Mauris porta ac lectus ac mattis. Aliquam erat volutpat. Pellentesque
-          vitae molestie nibh. Fusce dignissim, ipsum eu ullamcorper
-          condimentum, risus odio viverra augue, id egestas justo erat ac massa.
-          Donec porttitor massa mi. Praesent ut sem est. Donec aliquam mi elit,
-          ut molestie ligula accumsan sit amet. Fusce pharetra mi at enim
-          efficitur pharetra. Sed quis commodo nisl. Aliquam erat volutpat.
-          Praesent blandit eu lectus et auctor. Pellentesque urna mauris,
-          scelerisque in lacinia vitae, sollicitudin vel diam. Sed vitae diam in
-          magna bibendum dictum vitae nec tortor. Curabitur molestie, justo in
-          fringilla egestas, enim metus ullamcorper orci, nec laoreet nisl neque
-          mollis lorem.
+          Our field notes are made for real days outside: check the forecast, carry water, choose a route that suits your pace, and let someone know where you are going. Then take your time. Stop for the view. Turn back when it feels right. The point is not to cover the most ground; it is to come home with a story you want to tell.
         </p>
-        <a class="button" id="continue-reading-button">Continue reading</a>
+        <button class="button" id="continue-reading-button" type="button" aria-expanded="false" aria-controls="continue-reading-content">Continue reading <span aria-hidden="true">＋</span></button>
       </section>
     </div>
 
     <div class="wrapper">
       <section id="features" class="features">
-        <h1>Vestibulum faucibus nunc eget metus congue</h1>
-        <h4>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          pellentesque ligula ac semper blandit.
-        </h4>
+        <p class="eyebrow">A little know-how goes a long way</p>
+        <h2>Make the most of being out there.</h2>
+        <p class="section-intro">
+          Straightforward ideas for planning lighter, wandering farther, and enjoying the journey as much as the destination.
+        </p>
         <div class="features-content">
-          <div class="features-content-item">
-            <a href="#features"><img src="assets/images/image2.jpg" /></a>
-            <a class="image-link" href="#features"> Quis autem vel eum</a>
+          <div class="features-content-item" id="pack-for-the-day">
+            <a href="#image-content"><img src="assets/images/image2.jpg" alt="Snow-covered peaks beneath a clear sky" loading="lazy" /></a>
+            <a class="image-link" href="#image-content">Pack for the day</a>
             <p class="features-item-text">
-              Sed quia consequuntur magni dolores eos qui ratione voluptatem
-              sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-              dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-              eius modi.
+              A simple checklist for changing weather, comfortable layers, water, snacks, and the small essentials that help a day go smoothly.
             </p>
           </div>
-          <div class="features-content-item">
-            <a href="#features"><img src="assets/images/image2.jpg" /></a>
-            <a class="image-link" href="#features"> Neque porro quisquam </a>
+          <div class="features-content-item" id="choose-your-own-pace">
+            <a href="#image-content"><img src="assets/images/photo1.jpg" alt="Illustrated rugged peaks above a forested valley" loading="lazy" /></a>
+            <a class="image-link" href="#image-content">Choose your own pace</a>
             <p class="features-item-text">
-              Sed quia consequuntur magni dolores eos qui ratione voluptatem
-              sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-              dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-              eius modi.
+              Pick a route that leaves room for pauses. A good outing should fit the people, energy, and time you have today.
             </p>
           </div>
-          <div class="features-content-item">
-            <a href="#features"><img src="assets/images/image2.jpg" /></a>
-            <a class="image-link" href="#features"> Numquam eius modi </a>
+          <div class="features-content-item" id="leave-no-trace">
+            <a href="#image-content"><img src="assets/images/photo2.jpg" alt="Snowy peaks and a mountain trail" loading="lazy" /></a>
+            <a class="image-link" href="#image-content">Leave no trace</a>
             <p class="features-item-text">
-              Sed quia consequuntur magni dolores eos qui ratione voluptatem
-              sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-              dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-              eius modi.
+              A few thoughtful habits help keep wild places welcoming: stay on durable paths, pack out what you bring, and give wildlife space.
             </p>
           </div>
         </div>
       </section>
     </div>
 
-    <section class="footer" class="footer">
+    <footer class="footer">
       <div class="footer-content">
         <div class="footer-content-item">
-          <img class="footer-item-icon" src="assets/images/twitter.png" />
+          <img class="footer-item-icon" src="assets/images/twitter.png" alt="" />
+          <h3>Field notes</h3>
           <div class="twits">
             <div class="twit">
               <p class="twit-text no-border">
-                Temporibus autem quibusdam et aut officiis debitis aut rerum
-                saepe.
-                <span class="twit-time">15 minutes ago</span>
+                “The trail gets better when you stop watching the clock.”
+                <span class="twit-time">Field note 01</span>
               </p>
             </div>
             <div class="twit">
               <p class="twit-text">
-                Itaque earum rerum hic tenetur a sapiente delectus, reiciendis
-                voluptatibus maiores.
-                <span class="twit-time">43 minutes ago</span>
+                “Pack one less thing. Bring one more layer.”
+                <span class="twit-time">Field note 02</span>
               </p>
             </div>
             <div class="twit">
               <p class="twit-text">
-                Rut aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat.
-                <span class="twit-time">2 hours ago</span>
+                “A picnic tastes better with a view.”
+                <span class="twit-time">Field note 03</span>
               </p>
             </div>
             <div class="twit">
               <p class="twit-text">
-                Nam libero tempore, cum soluta nobis est eligendi.
-                <span class="twit-time">15 hours ago</span>
+                “Take only photos. Leave room for wonder.”
+                <span class="twit-time">Field note 04</span>
               </p>
             </div>
           </div>
         </div>
         <div class="footer-content-item">
-          <img class="footer-item-icon" src="assets/images/article.png" />
+          <img class="footer-item-icon" src="assets/images/article.png" alt="" />
+          <h3>From the journal</h3>
           <div class="articles">
             <div class="article no-border">
-              <a>Ut enim ad minima veniam</a>
-              <p style="color: rgba(128, 128, 128, 0.75)">3 hours ago</p>
+              <a href="#image-content">Take the scenic route</a>
+              <p>Journal story</p>
             </div>
             <div class="article">
-              <a>Excepteur sint occaecat</a>
-              <p style="color: rgba(128, 128, 128, 0.75)">3 hours ago</p>
+              <a href="#pack-for-the-day">Pack for the day</a>
+              <p>Practical guide</p>
             </div>
             <div class="article">
-              <a>Quis autem vel eum iure </a>
-              <p style="color: rgba(128, 128, 128, 0.75)">3 hours ago</p>
+              <a href="#choose-your-own-pace">Choose your own pace</a>
+              <p>Field note</p>
             </div>
             <div class="article">
-              <a>Sed ut perspiciatis unde</a>
-              <p style="color: rgba(128, 128, 128, 0.75)">3 hours ago</p>
+              <a href="#leave-no-trace">Leave no trace</a>
+              <p>Good practice</p>
             </div>
           </div>
         </div>
         <div class="footer-content-item">
-          <img class="footer-item-icon" src="assets/images/photo.png" />
+          <img class="footer-item-icon" src="assets/images/photo.png" alt="" />
+          <h3>Photo diary</h3>
           <div class="photos">
             <div class="photos-row">
               <div class="photo">
-                <img src="assets/images/photo1.jpg" />
+                <img src="assets/images/photo1.jpg" alt="Illustrated rugged mountain peaks" loading="lazy" />
               </div>
               <div class="photo">
-                <img src="assets/images/photo2.jpg" />
-              </div>
-            </div>
-            <div class="photos-row">
-              <div class="photo">
-                <img src="assets/images/photo2.jpg" />
-              </div>
-              <div class="photo">
-                <img src="assets/images/photo1.jpg" />
+                <img src="assets/images/photo2.jpg" alt="Snowy mountain range" loading="lazy" />
               </div>
             </div>
             <div class="photos-row">
               <div class="photo">
-                <img src="assets/images/photo1.jpg" />
+                <img src="assets/images/photo3.jpg" alt="Green mountain slopes beneath hazy peaks" loading="lazy" />
               </div>
               <div class="photo">
-                <img src="assets/images/photo2.jpg" />
+                <img src="assets/images/image1.jpg" alt="A rocky mountain valley beneath a cloudy sky" loading="lazy" />
+              </div>
+            </div>
+            <div class="photos-row">
+              <div class="photo">
+                <img src="assets/images/image2.jpg" alt="Snow-covered peaks beneath a deep blue sky" loading="lazy" />
+              </div>
+              <div class="photo">
+                <img src="assets/images/image-content.jpg" alt="Layered blue mountains above a golden slope" loading="lazy" />
               </div>
             </div>
           </div>
@@ -279,91 +236,88 @@
       <div class="footer-footer">
         <hr />
         <div class="footer-footer-content">
-          <h3>Cras bibendum dolor sed enim consequat?</h3>
+          <h3>Keep a little room for the unexpected.</h3>
           <p>
-            Donec vitae mi urna. Cras bibendum dolor sed enim consequat, in
-            pharetra nisl pretium. Vestibulum dapibus nunc vel hendrerit mattis.
+            Elsewhere Journal is a fictional sample brand. The stories and tips on this demo page are illustrative; make every trip your own and check local guidance before heading out.
           </p>
         </div>
       </div>
-      <div class="icons">
-        <a
-          href="https://www.twitter.com/"
-          target="_blank"
-          class="fa fa-twitter"
-        ></a>
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          class="fa fa-facebook"
-        ></a>
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          class="fa fa-instagram"
-        ></a>
-        <a
-          href="https://www.pinterest.com/"
-          target="_blank"
-          class="fa fa-pinterest"
-        ></a>
-        <a
-          href="https://dribbble.com/"
-          target="_blank"
-          class="fa fa-dribbble"
-        ></a>
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          class="fa fa-linkedin"
-        ></a>
+      <div class="icons" role="group" aria-label="Social media icon examples">
+        <a href="" aria-label="Twitter icon example" class="fa fa-twitter"></a>
+        <a href="" aria-label="Facebook icon example" class="fa fa-facebook"></a>
+        <a href="" aria-label="Instagram icon example" class="fa fa-instagram"></a>
+        <a href="" aria-label="Pinterest icon example" class="fa fa-pinterest"></a>
+        <a href="" aria-label="Dribbble icon example" class="fa fa-dribbble"></a>
+        <a href="" aria-label="LinkedIn icon example" class="fa fa-linkedin"></a>
       </div>
-      <div class="footer-ending">© Footer</div>
-    </section>
+      <div class="footer-ending">© <span id="year"></span> Elsewhere Journal · Sample landing page</div>
+    </footer>
 
     <script>
       const carousel = document.getElementById("carousel");
       const forward = document.getElementById("forward");
       const backward = document.getElementById("backward");
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-
-      let moveCarousel;
-      forward.addEventListener("mouseenter", function () {
-        moveCarousel = setInterval(() => {
-          if (carousel.scrollLeft < maxScroll) {
-            carousel.scrollLeft += 4;
-            forward.style.right = -1 * carousel.scrollLeft + "px";
-            backward.style.left = carousel.scrollLeft + "px";
-          }
-        }, 10);
+      const scrollStories = (direction) => {
+        const card = carousel.querySelector(".carousel-item");
+        const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
+        carousel.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: "smooth" });
+      };
+      const updateCarouselControls = () => {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        const hasOverflow = maxScroll > 1;
+        backward.hidden = forward.hidden = !hasOverflow;
+        backward.disabled = carousel.scrollLeft <= 1;
+        forward.disabled = carousel.scrollLeft >= maxScroll - 1;
+      };
+      forward.addEventListener("click", () => scrollStories(1));
+      backward.addEventListener("click", () => scrollStories(-1));
+      carousel.addEventListener("scroll", updateCarouselControls, { passive: true });
+      window.addEventListener("resize", updateCarouselControls);
+      updateCarouselControls();
+      carousel.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          scrollStories(1);
+        }
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          scrollStories(-1);
+        }
       });
 
-      forward.addEventListener("mouseleave", function () {
-        clearInterval(moveCarousel);
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+      dropdownToggle.addEventListener("click", () => {
+        const isOpen = dropdownToggle.getAttribute("aria-expanded") === "true";
+        dropdownToggle.setAttribute("aria-expanded", String(!isOpen));
       });
-
-      backward.addEventListener("mouseenter", function () {
-        moveCarousel = setInterval(() => {
-          if (carousel.scrollLeft > 0) {
-            carousel.scrollLeft -= 4;
-            forward.style.right = -1 * carousel.scrollLeft + "px";
-            backward.style.left = carousel.scrollLeft + "px";
-          }
-        }, 10);
+      dropdownToggle.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          dropdownToggle.setAttribute("aria-expanded", "false");
+          dropdownToggle.focus();
+        }
       });
-
-      backward.addEventListener("mouseleave", function () {
-        clearInterval(moveCarousel);
+      document.querySelector(".dropdown-content").addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          dropdownToggle.setAttribute("aria-expanded", "false");
+          dropdownToggle.focus();
+        }
+      });
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".dropdown")) dropdownToggle.setAttribute("aria-expanded", "false");
       });
 
       const continueReadingButton = document.getElementById(
         "continue-reading-button"
       );
       continueReadingButton.addEventListener("click", function () {
-        document.getElementById("continue-reading-content").style.display =
-          "block";
-        continueReadingButton.style.display = "none";
+        const more = document.getElementById("continue-reading-content");
+        const isExpanded = continueReadingButton.getAttribute("aria-expanded") === "true";
+        more.hidden = isExpanded;
+        continueReadingButton.setAttribute("aria-expanded", String(!isExpanded));
+        continueReadingButton.firstChild.textContent = isExpanded ? "Continue reading " : "Show less ";
+        continueReadingButton.querySelector("span").textContent = isExpanded ? "＋" : "−";
       });
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

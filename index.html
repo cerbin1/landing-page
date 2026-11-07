@@ -34,6 +34,11 @@
         <a class="nav-item" href="#carousel">Field notes</a>
         <a class="nav-item" href="#image-content">The journal</a>
         <a class="nav-item" href="#features">Travel well</a>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button class="language-option is-active" type="button" data-language="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true">|</span>
+          <button class="language-option" type="button" data-language="pl" aria-pressed="false">PL</button>
+        </div>
         <div class="nav-line">
           <hr />
         </div>
@@ -318,6 +323,71 @@
         continueReadingButton.querySelector("span").textContent = isExpanded ? "＋" : "−";
       });
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const translations = {
+        "An independent travel journal": "Niezależny dziennik podróżniczy",
+        "Find your way<br>outside.": "Znajdź swoją drogę<br>w plener.",
+        "Slow journeys, open trails, and the places that stay with you.": "Spokojne podróże, otwarte szlaki i miejsca, które zostają z tobą.",
+        "Read the latest issue <span aria-hidden=\"true\">↘</span>": "Przeczytaj najnowsze wydanie <span aria-hidden=\"true\">↘</span>",
+        "Stories for the long way round": "Historie z drogi naokoło",
+        "Go where the day takes you.": "Daj się poprowadzić dniu.",
+        "Trail notes, thoughtful guides, and small reminders to look up from the map.": "Notatki ze szlaków, praktyczne przewodniki i przypomnienia, by czasem oderwać wzrok od mapy.",
+        "When the peaks turn quiet": "Gdy szczyty cichną", "A slower route through high country.": "Spokojniejsza trasa przez górskie okolice.",
+        "Winter, without the rush": "Zima bez pośpiechu", "Finding stillness in the snow line.": "Odnajdywanie ciszy na granicy śniegu.",
+        "A trail worth taking": "Szlak wart drogi", "Small steps, wide open views.": "Małe kroki, rozległe widoki.",
+        "Notes from the ridgeline": "Notatki z grani", "What to pack, where to pause, when to wander.": "Co spakować, gdzie odpocząć i kiedy ruszyć przed siebie.",
+        "The view on the way back": "Widok w drodze powrotnej", "The best part of a journey is often the return.": "Najpiękniejszą częścią podróży bywa powrót.",
+        "From the journal": "Z dziennika", "Take the scenic route.": "Wybierz malowniczą trasę.",
+        "A good trip is more than a list of stops. It is the early light on a trail, a warm meal after a long walk, and enough time to take the path that caught your eye.": "Dobra podróż to coś więcej niż lista przystanków. To poranne światło na szlaku, ciepły posiłek po długim marszu i czas, by wybrać ścieżkę, która przykuła twoją uwagę.",
+        "Elsewhere is a sample journal for curious travelers. We collect practical notes and personal stories that make it easier to plan a day outdoors, leave a little room for detours, and notice the details that make a place feel like its own.": "Elsewhere to przykładowy dziennik dla ciekawych świata podróżników. Zbieramy praktyczne wskazówki i osobiste historie, które pomagają zaplanować dzień na świeżym powietrzu, zostawić miejsce na objazdy i dostrzec szczegóły nadające miejscu wyjątkowy charakter.",
+        "Our field notes are made for real days outside: check the forecast, carry water, choose a route that suits your pace, and let someone know where you are going. Then take your time. Stop for the view. Turn back when it feels right. The point is not to cover the most ground; it is to come home with a story you want to tell.": "Nasze notatki przydadzą się podczas prawdziwych wypraw: sprawdź prognozę, zabierz wodę, wybierz trasę odpowiednią do swojego tempa i powiedz komuś, dokąd idziesz. Potem nie spiesz się. Zatrzymaj się dla widoku. Zawróć, gdy uznasz to za słuszne. Nie chodzi o pokonanie jak największej odległości, lecz o powrót z historią, którą chcesz opowiedzieć.",
+        "Continue reading <span aria-hidden=\"true\">＋</span>": "Czytaj dalej <span aria-hidden=\"true\">＋</span>",
+        "Show less ": "Pokaż mniej ", "Continue reading ": "Czytaj dalej ",
+        "A little know-how goes a long way": "Odrobina wiedzy wiele zmienia",
+        "Make the most of being out there.": "Wykorzystaj każdą chwilę na szlaku.",
+        "Straightforward ideas for planning lighter, wandering farther, and enjoying the journey as much as the destination.": "Proste wskazówki, jak spakować się lżej, wędrować dalej i cieszyć się drogą tak samo jak celem.",
+        "Pack for the day": "Spakuj się na cały dzień",
+        "A simple checklist for changing weather, comfortable layers, water, snacks, and the small essentials that help a day go smoothly.": "Prosta lista na zmienną pogodę: wygodne warstwy ubrań, woda, przekąski i drobiazgi, które ułatwią dzień.",
+        "Choose your own pace": "Wybierz własne tempo",
+        "Pick a route that leaves room for pauses. A good outing should fit the people, energy, and time you have today.": "Wybierz trasę, na której starczy czasu na odpoczynek. Dobra wyprawa pasuje do ludzi, sił i czasu, którymi dziś dysponujesz.",
+        "Leave no trace": "Nie zostawiaj śladów",
+        "A few thoughtful habits help keep wild places welcoming: stay on durable paths, pack out what you bring, and give wildlife space.": "Kilka dobrych nawyków pomaga zachować dzikie miejsca: trzymaj się wyznaczonych ścieżek, zabierz ze sobą śmieci i nie zbliżaj się do zwierząt.",
+        "Field notes": "Notatki z trasy", "Photo diary": "Dziennik fotograficzny", "Field note 01": "Notatka 01", "Field note 02": "Notatka 02", "Field note 03": "Notatka 03", "Field note 04": "Notatka 04",
+        "“The trail gets better when you stop watching the clock.”": "„Szlak staje się piękniejszy, gdy przestajesz patrzeć na zegarek.”", "“Pack one less thing. Bring one more layer.”": "„Weź o jedną rzecz mniej i jedną warstwę więcej.”", "“A picnic tastes better with a view.”": "„Piknik smakuje lepiej z widokiem.”", "“Take only photos. Leave room for wonder.”": "„Zabierz tylko zdjęcia. Zostaw miejsce na zachwyt.”",
+        "Journal story": "Historia z dziennika", "Practical guide": "Praktyczny poradnik", "Field note": "Notatka z trasy", "Good practice": "Dobra praktyka",
+        "Keep a little room for the unexpected.": "Zostaw trochę miejsca na niespodzianki.",
+        "Elsewhere Journal is a fictional sample brand. The stories and tips on this demo page are illustrative; make every trip your own and check local guidance before heading out.": "Elsewhere Journal to fikcyjna marka demonstracyjna. Historie i wskazówki na tej stronie są przykładowe. Ruszaj w swoją drogę i przed wyprawą sprawdź lokalne zalecenia.",
+        "Social media icon examples": "Przykładowe ikony mediów społecznościowych", "Twitter icon example": "Przykładowa ikona Twittera", "Facebook icon example": "Przykładowa ikona Facebooka", "Instagram icon example": "Przykładowa ikona Instagrama", "Pinterest icon example": "Przykładowa ikona Pinteresta", "Dribbble icon example": "Przykładowa ikona Dribbble", "LinkedIn icon example": "Przykładowa ikona LinkedIn",
+        "Main navigation": "Nawigacja główna", "Explore": "Odkrywaj", "Home": "Start", "Travel well": "Podróżuj dobrze", "The journal": "Dziennik", "Scroll to discover": "Przewiń, aby odkrywać", "Featured stories": "Polecane historie", "Scrollable featured stories": "Przewijane polecane historie", "Scroll to previous stories": "Poprzednie historie", "Scroll to next stories": "Następne historie", "Sample landing page": "Przykładowa strona główna"
+      };
+      const originalMarkup = new Map();
+      document.querySelectorAll("body *:not(script):not(style)").forEach((element) => {
+        if (element.children.length === 0) originalMarkup.set(element, element.innerHTML);
+      });
+      const savedLanguage = localStorage.getItem("elsewhere-language");
+      let currentLanguage = savedLanguage === "pl" ? "pl" : "en";
+      const languageOptions = document.querySelectorAll(".language-option");
+      languageOptions.forEach((option) => option.addEventListener("click", () => {
+        currentLanguage = option.dataset.language;
+        localStorage.setItem("elsewhere-language", currentLanguage);
+        document.documentElement.lang = currentLanguage;
+        originalMarkup.forEach((markup, element) => {
+          const key = markup.trim();
+          if (currentLanguage === "en") element.innerHTML = markup;
+          else if (translations[key]) element.innerHTML = translations[key];
+        });
+        document.querySelector(".logo").innerHTML = currentLanguage === "en" ? "Find your way<br />outside." : "Znajdź swoją drogę<br />w plener.";
+        document.querySelector(".inner .button").innerHTML = currentLanguage === "en" ? 'Read the latest issue <span aria-hidden="true">↘</span>' : 'Przeczytaj najnowsze wydanie <span aria-hidden="true">↘</span>';
+        continueReadingButton.innerHTML = currentLanguage === "en" ? 'Continue reading <span aria-hidden="true">＋</span>' : 'Czytaj dalej <span aria-hidden="true">＋</span>';
+        languageOptions.forEach((languageOption) => {
+          const isActive = languageOption.dataset.language === currentLanguage;
+          languageOption.classList.toggle("is-active", isActive);
+          languageOption.setAttribute("aria-pressed", String(isActive));
+        });
+      }));
+      if (currentLanguage === "pl") {
+        document.querySelector('.language-option[data-language="pl"]').click();
+      }
     </script>
   </body>
 </html>
